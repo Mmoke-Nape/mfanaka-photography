@@ -1,0 +1,151 @@
+.contact-container {
+  padding: 120px 0 60px;
+  
+  .contact-info {
+    margin-bottom: 40px;
+    
+    .page-title {
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+    
+    .info-section {
+      margin-bottom: 30px;
+      
+      h3 {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+      
+      p {
+        font-size: 1.1rem;
+        
+        a {
+          color: #fff;
+          transition: color 0.3s ease;
+          
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+    
+    .photographer-image {
+      position: relative;
+      margin-top: 40px;
+      
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+      .border-accent {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: -20px;
+        bottom: -20px;
+        border: 2px solid var(--primary-color);
+        z-index: -1;
+      }
+    }
+  }
+  
+  .contact-form {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    
+    h2 {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+    
+    .form-group {
+      margin-bottom: 25px;
+      
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+      }
+      
+      .form-control {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 0;
+        padding: 12px 15px;
+        color: #fff;
+        
+        &:focus {
+          box-shadow: 0 0 0 2px var(--primary-color);
+        }
+      }
+      
+      .invalid-feedback {
+        color: #ff6b6b;
+        font-size: 0.8rem;
+        margin-top: 5px;
+      }
+    }
+    
+    .captcha {
+      .captcha-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        
+        p {
+          margin-bottom: 10px;
+          font-size: 0.9rem;
+        }
+        
+        .captcha-check {
+          display: flex;
+          align-items: center;
+          
+          input {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    
+    .btn-primary {
+      padding: 12px 30px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      border-radius: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 100px 0 40px;
+    
+    .contact-info {
+      text-align: center;
+      
+      .page-title {
+        font-size: 2rem;
+      }
+      
+      .photographer-image {
+        max-width: 400px;
+        margin: 40px auto 0;
+      }
+    }
+    
+    .contact-form {
+      padding: 30px 20px;
+    }
+  }
+}
