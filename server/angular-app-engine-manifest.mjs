@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/mfanaka-photography',
+  basePath: '/',
   supportedLocales: {
   "en-US": ""
 },
