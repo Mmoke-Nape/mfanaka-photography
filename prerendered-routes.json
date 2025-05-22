@@ -1,8 +1,8 @@
 {
   "routes": {
-    "/": {},
-    "/about": {},
-    "/contact": {},
-    "/portfolio": {}
+    "/mfanaka-photography": {},
+    "/mfanaka-photography/about": {},
+    "/mfanaka-photography/contact": {},
+    "/mfanaka-photography/portfolio": {}
   }
 }
