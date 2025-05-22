@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:mfanaka-photography": "node dist/mfanaka-photography/server/server.mjs"
+    "serve:ssr:mfanaka-photography": "node dist/mfanaka-photography/server/server.mjs",
+    "deploy": "ng build --configuration production --prerender=false && npx angular-cli-ghpages --dir=dist/mfanaka-photography"
   },
   "private": true,
   "dependencies": {

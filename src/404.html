@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+      // Get the segment of the URL after the domain
+      var segment = window.location.pathname;
+
+      // Redirect to the root with the path segment as a query parameter
+      // This allows the Angular router to handle the correct route
+      window.location.replace(window.location.origin + "/?path=" + segment);
+    </script>
+  </head>
+  <body></body>
+</html>
