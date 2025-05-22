@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'https://Mmoke-Nape.github.io/mfanaka-photography',
+  basePath: '/mfanaka-photography',
   supportedLocales: {
   "en-US": ""
 },
