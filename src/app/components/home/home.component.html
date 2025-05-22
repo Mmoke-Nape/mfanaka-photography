@@ -1,13 +1,16 @@
 <div class="home-container">
   <!-- Video Background -->
   <div class="video-background">
-    <video autoplay muted loop id="bgVideo">
-      <source src="assets/videos/background.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline id="bgVideo">
+      <source
+        src="https://videos.pexels.com/video-files/3917525/3917525-uhd_2732_1440_25fps.mp4"
+        type="video/mp4"
+      />
       Your browser does not support HTML5 video.
     </video>
     <div class="overlay"></div>
   </div>
-  
+
   <!-- Main Content -->
   <div class="content">
     <div class="photographer-name">
@@ -15,16 +18,16 @@
       <h2>Fashion & Portrait Photographer - South Africa</h2>
     </div>
   </div>
-  
+
   <!-- Featured Work Grid -->
   <div class="featured-work">
     <div class="container">
       <div class="grid-container">
         <div class="grid-item" *ngFor="let item of featuredItems">
           <div class="image-container">
-            <img [src]="item.image" [alt]="item.title">
+            <img [src]="item.image" [alt]="item.title" />
             <div class="overlay">
-              <h3>{{item.title}}</h3>
+              <h3>{{ item.title }}</h3>
             </div>
           </div>
         </div>
