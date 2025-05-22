@@ -4,19 +4,26 @@
       <div class="col-md-5">
         <div class="contact-info">
           <h1 class="page-title">CONTACT MFANAKA KA MALULEKE</h1>
-          
+
           <div class="info-section">
             <h3>Booking Inquiries</h3>
-            <p><a href="mailto:mkmaluleke.bookings@gmail.com">mkmaluleke.bookings@gmail.com</a></p>
+            <p>
+              <a href="mailto:mkmaluleke.bookings@gmail.com"
+                >mkmaluleke.bookings&#64;gmail.com</a
+              >
+            </p>
           </div>
-          
+
           <div class="info-section">
             <h3>Locations</h3>
             <p>Pretoria | Johannesburg</p>
           </div>
-          
+
           <div class="photographer-image">
-            <img src="assets/images/photographer-contact.jpg" alt="Mfanaka Ka Maluleke">
+            <img
+              src="assets/images/photographer-contact.jpg"
+              alt="Mfanaka Ka Maluleke"
+            />
             <div class="border-accent"></div>
           </div>
         </div>
@@ -24,68 +31,120 @@
       <div class="col-md-7">
         <div class="contact-form">
           <h2>Send a Message</h2>
-          
+
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" id="name" formControlName="name" class="form-control" 
-                [ngClass]="{'is-invalid': submitted && f.name.errors}">
-              <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                <div *ngIf="f.name.errors.required">Name is required</div>
+              <input
+                type="text"
+                id="name"
+                formControlName="name"
+                class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
+              />
+              <div
+                *ngIf="submitted && f['name'].errors"
+                class="invalid-feedback"
+              >
+                <div *ngIf="f['name'].errors['required']">Name is required</div>
               </div>
             </div>
-            
+
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" formControlName="email" class="form-control"
-                [ngClass]="{'is-invalid': submitted && f.email.errors}">
-              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                <div *ngIf="f.email.errors.required">Email is required</div>
-                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              <input
+                type="email"
+                id="email"
+                formControlName="email"
+                class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+              />
+              <div
+                *ngIf="submitted && f['email'].errors"
+                class="invalid-feedback"
+              >
+                <div *ngIf="f['email'].errors['required']">
+                  Email is required
+                </div>
+                <div *ngIf="f['email'].errors['email']">
+                  Email must be a valid email address
+                </div>
               </div>
             </div>
-            
+
             <div class="form-group">
               <label for="inquiryType">Inquiry Type</label>
-              <select id="inquiryType" formControlName="inquiryType" class="form-control"
-                [ngClass]="{'is-invalid': submitted && f.inquiryType.errors}">
+              <select
+                id="inquiryType"
+                formControlName="inquiryType"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': submitted && f['inquiryType'].errors
+                }"
+              >
                 <option value="">Select Inquiry Type</option>
                 <option value="booking">Booking Request</option>
                 <option value="collaboration">Collaboration</option>
                 <option value="pricing">Pricing Information</option>
                 <option value="other">Other</option>
               </select>
-              <div *ngIf="submitted && f.inquiryType.errors" class="invalid-feedback">
-                <div *ngIf="f.inquiryType.errors.required">Inquiry type is required</div>
+              <div
+                *ngIf="submitted && f['inquiryType'].errors"
+                class="invalid-feedback"
+              >
+                <div *ngIf="f['inquiryType'].errors['required']">
+                  Inquiry type is required
+                </div>
               </div>
             </div>
-            
+
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" formControlName="message" rows="5" class="form-control"
-                [ngClass]="{'is-invalid': submitted && f.message.errors}"></textarea>
-              <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
-                <div *ngIf="f.message.errors.required">Message is required</div>
+              <textarea
+                id="message"
+                formControlName="message"
+                rows="5"
+                class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['message'].errors }"
+              ></textarea>
+              <div
+                *ngIf="submitted && f['message'].errors"
+                class="invalid-feedback"
+              >
+                <div *ngIf="f['message'].errors['required']">
+                  Message is required
+                </div>
               </div>
             </div>
-            
+
             <div class="form-group captcha">
               <div class="captcha-box">
                 <p>CAPTCHA verification</p>
                 <div class="captcha-check">
-                  <input type="checkbox" id="captcha" formControlName="captcha">
+                  <input
+                    type="checkbox"
+                    id="captcha"
+                    formControlName="captcha"
+                  />
                   <label for="captcha">I am not a robot</label>
                 </div>
               </div>
-              <div *ngIf="submitted && f.captcha.errors" class="invalid-feedback d-block">
-                <div *ngIf="f.captcha.errors.required">Please verify you are not a robot</div>
+              <div
+                *ngIf="submitted && f['captcha'].errors"
+                class="invalid-feedback d-block"
+              >
+                <div *ngIf="f['captcha'].errors['required']">
+                  Please verify you are not a robot
+                </div>
               </div>
             </div>
-            
+
             <div class="form-group">
-              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
             </div>
-            
+
             <div *ngIf="submitted && success" class="alert alert-success">
               Your message has been sent successfully!
             </div>

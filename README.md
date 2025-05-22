@@ -1,59 +1,107 @@
-# MfanakaPhotography
+# Mfanaka Ka Maluleke Photography Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+This is an Angular-based photography portfolio website for Mfanaka Ka Maluleke, a renowned South African fashion and portrait photographer. The site is designed based on Lindsay Adler's website with specific customizations.
 
-## Development server
+## Project Overview
 
-To start a local development server, run:
+The website features:
+- Responsive design with mobile-friendly layout
+- Motion background on homepage
+- Portfolio categories with grid layout
+- About page with photographer information
+- Contact form with validation
+- Black background with minimalist aesthetic
+- Custom color scheme with vibrant pink (#FF3E8F) and emerald green (#00A86B)
 
-```bash
+## Setup Instructions
+
+### Prerequisites
+- Node.js and npm installed
+- Angular CLI
+
+### Installation
+1. Clone this repository
+```
+git clone https://github.com/Mmoke-Nape/mfanaka-photography.git
+```
+
+2. Navigate to the project directory
+```
+cd mfanaka-photography
+```
+
+3. Install dependencies
+```
+npm install
+```
+
+4. Run the development server
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+5. Open your browser and navigate to `http://localhost:4200`
 
-## Code scaffolding
+## Project Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `src/app/components/` - Main page components
+  - `home/` - Homepage with motion background
+  - `portfolio/` - Portfolio categories grid
+  - `about/` - About page
+  - `contact/` - Contact form
+- `src/app/shared/` - Shared components
+  - `header/` - Navigation header
+  - `footer/` - Site footer
+- `src/assets/` - Images and videos
+  - `images/` - Portfolio and photographer images
+  - `videos/` - Background video for homepage
 
-```bash
-ng generate component component-name
+## Features
+
+### Homepage
+- Full-screen background with motion/video elements
+- Grid layout of featured photography work
+- Photographer's name prominently displayed
+
+### Portfolio Page
+- Grid layout of portfolio categories with hover effects
+- Categories: Fashion Editorial, Glamour, Portrait, Studio, Fashion I, Fashion II, Commercial, Lifestyle, Cultural, Advertising
+
+### About Page
+- Professional headshot with colored border accent
+- Biography text with professional accomplishments
+- Clean, minimalist layout with strong typography
+
+### Contact Page
+- Functional contact form with validation
+- Fields for Name, Email, Inquiry type, and Message
+- CAPTCHA verification
+
+## Deployment
+
+To build the project for production:
+
+```
+ng build --configuration production
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The build artifacts will be stored in the `dist/` directory.
 
-```bash
-ng generate --help
+## GitHub Repository
+
+To push this project to your GitHub repository:
+
+1. Create a new repository on GitHub
+2. Add the remote repository URL
+```
+git remote add origin https://github.com/Mmoke-Nape/mfanaka-photography.git
+```
+3. Push the code to GitHub
+```
+git push -u origin master
 ```
 
-## Building
+## Credits
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Design inspiration: Lindsay Adler Photography
+- Development: Angular framework
